@@ -17,7 +17,7 @@ services:
     image: docker.elastic.co/kibana/kibana-oss:7.0.1
     ports:
       - 5601:5601
-  loader:
+  loaderowasplab:
     build: ./loader
     depends_on:
       - elasticsearchowasplab
