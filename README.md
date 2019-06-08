@@ -2,11 +2,11 @@
 This repository contains a simple exercise for using Kibana to find something malicious.  Log loading is handled for you, so all you should need to do is use docker compose and then access the Kibana interface.  The data is based on NGINX access logs for a web application.
 
 ## Getting started
-Assuming you have a docker and docker-compose setup:
+Assuming you have docker and docker-compose setup:
 - docker-compose up
 
 ## What just happened?
-The docker-compose file sets up Elasticsearch, Kibana and loads up the data.  Once the loader is done you should see a message like:
+The docker-compose file sets up Elasticsearch, Kibana and loads the data.  Once the loader is done you should see a message like:
 ```
 loaderowasplab_1         | Starting parse log process
 loaderowasplab_1         | Opening log file and reading
