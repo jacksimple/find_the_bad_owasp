@@ -1,7 +1,7 @@
 from elasticsearch import Elasticsearch, helpers
 
 class ElasticsearchWriter():
-    def __init__(self, host='elasticsearchowasplab', base_index='accesslogs', initialize=True):
+    def __init__(self, host='elasticsearch', base_index='accesslogs', initialize=True):
         # First create the db
         self.conn = Elasticsearch(host)
         self.base_index = base_index
