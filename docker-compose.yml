@@ -1,0 +1,23 @@
+version: "3"
+services:
+  elasticsearchowasplab:
+    image: docker.elastic.co/elasticsearch/elasticsearch-oss:7.0.1
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - 9200:9200
+  kibanaowasplab:
+    image: docker.elastic.co/kibana/kibana-oss:7.0.1
+    ports:
+      - 5601:5601
+  loader:
+    build: ./loader
+    depends_on:
+      - elasticsearchowasplab
